@@ -44,8 +44,8 @@ def weathermodel():
         
         #print("youre temp is {}°C,description of the weather is {}, wind speed is {}m/s and the pressure is {}hPa".format(temp,weatherdesc,speed,pressure))
 
-        data = "weatherdata.csv"
-        with open(data, mode='a', newline='') as file:
+        
+        with open(data1, mode='a', newline='') as file:
             writer = csv.writer(file)
             writer.writerow([date, time, temp, speed, pressure, humidity, weatherdesc])
     else:
