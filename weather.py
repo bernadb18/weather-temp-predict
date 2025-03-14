@@ -131,7 +131,7 @@ print(weathercurrenthour())
 print("youre temp is {}°C,description of the weather is {}, wind speed is {}m/s and the pressure is {}hPa".format(temp,weatherdesc,speed,pressure))
 
 
-
+### implementing   more features for more accurate predict in the future when the weather data big enough
 def timepredtemp():
     data["timestamp"] = pan.to_datetime(data["timestamp"])
     data["hour"] = data["timestamp"].dt.hour
@@ -170,8 +170,8 @@ def timepredtemp():
     
     print("mean absolute error: {}".format(absolute))
 
-    print(data['timestamp'].head())
+    #print(data['timestamp'].head())
 
-    print(predictdata.head())
-    print(usedata.head())
+    #print(predictdata.head())
+    #print(usedata.head())
 print(timepredtemp())
