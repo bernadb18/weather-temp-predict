@@ -20,7 +20,7 @@ DULON =  -6.2842
 #hour = input("in (00:00:00)24hour format: ")
 
 
-apikey = '85f6ff7e57304e36c5de62551c8d9c60'
+apikey = "85f6ff7e57304e36c5de62551c8d9c60"
 url = f"http://api.openweathermap.org/data/2.5/weather?lat={DULAT}&lon={DULON}&appid={apikey}"
 response = requests.get(url)
 weatherdata = response.json()
@@ -49,11 +49,11 @@ def weathermodel():
         #print("youre temp is {}°C,description of the weather is {}, wind speed is {}m/s and the pressure is {}hPa".format(temp,weatherdesc,speed,pressure))
 
         
-        with open(data1, mode='a', newline='') as file:
+        with open(data1, mode="a", newline=" ") as file:
             writer = csv.writer(file)
             writer.writerow([date, time, temp, speed, pressure, humidity, weatherdesc])
     else:
-        print(f"Error: {response.status_code}")
+        print("Error: {}".format(status_code))
 
 #logic error somehwere
 def bigtime():
