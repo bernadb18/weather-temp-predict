@@ -6,7 +6,7 @@ import time
 import pandas as pan
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import  mean_absolute_error
+
 from sklearn.linear_model import LinearRegression
 
 timepredhr = int(input("hour in (00): "))
@@ -109,7 +109,7 @@ def  weathercurrenthour():
 
 
     
-    absolute = mean_absolute_error(predictdataytest, pred)
+    
 
     newdata = [[speed, pressure, humidity]]
     newdatadf = pan.DataFrame(newdata, columns=["windspeed", "pressure", "humidity"])
@@ -122,7 +122,7 @@ def  weathercurrenthour():
     print("predicted temperature:{}".format(predictemperature[0]))
 
     
-    print("mean absolute error: {}".format(absolute))
+    
 
     #print(data.head())
     return weathercurrenthour
@@ -155,7 +155,7 @@ def timepredtemp():
 
 
     
-    absolute = mean_absolute_error(predictdataytest, pred)
+    
 
     newdata = [[timepredhr, timepredsec, timepredmin]]
     newdatadf = pan.DataFrame(newdata, columns=["hour","second", "minute"])
@@ -168,7 +168,7 @@ def timepredtemp():
     print("predicted temperature for pred time {}:{}:{} is {}".format(timepredhr,timepredmin,timepredsec,predictemperature[0]))
 
     
-    print("mean absolute error: {}".format(absolute))
+    
 
     #print(data['timestamp'].head())
 
