@@ -52,6 +52,7 @@ def weathermodel():
         with open(data1, mode="a", newline=" ") as file:
             writer = csv.writer(file)
             writer.writerow([date, time, temp, speed, pressure, humidity, weatherdesc])
+            file.close()
     else:
         print("Error: {}".format(status_code))
 
