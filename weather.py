@@ -76,7 +76,7 @@ def bigtime():
        elif minute > 30:
             waittime = (60 - minute) * 60 - second + 30 * 60
             print(waittime)
-            return waittime
+            
     
 
 
@@ -125,9 +125,9 @@ def  weathercurrenthour():
     print("mean absolute error: {}".format(absolute))
 
     #print(data.head())
-    return weathercurrenthour
+    
 
-print(weathercurrenthour())
+weathercurrenthour()
 print("youre temp is {}°C,description of the weather is {}, wind speed is {}m/s and the pressure is {}hPa".format(temp,weatherdesc,speed,pressure))
 
 
@@ -174,4 +174,4 @@ def timepredtemp():
 
     #print(predictdata.head())
     #print(usedata.head())
-print(timepredtemp())
+timepredtemp()
